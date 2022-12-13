@@ -18,4 +18,4 @@ To do this, we'll create a separate project in the sample solution and use the f
 
 After writing the testing architecture, we'll write three data-driven tests.
 
-See the full article [here](https://workflowengine.io/documentation/how-to-test-workflow-schemes).
+**See the full article [here](https://workflowengine.io/documentation/how-to-test-workflow-schemes).**
