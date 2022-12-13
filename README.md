@@ -9,7 +9,7 @@ chance of bugs.
 ### What's in the guide
 
 Following this guide, you'll write automated tests for the **Vacation request** workflow scheme from the Workflow
-Engine [Demo](https://demo.workflowengine.io/designer) (you can learn more about the Demo in [this article](/demo-description)).
+Engine [Demo](https://demo.workflowengine.io/designer) (you can learn more about the Demo in [this article](https://workflowengine.io/documentation/demo-description).
 To do this, we'll create a separate project in the sample solution and use the following testing tools:
 
 - [MSTest](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest) framework will run and process the tests.
