@@ -1,0 +1,111 @@
+[
+  {
+    "Id": "dc114758-d201-488e-ba88-a4a24bb57a3c",
+    "Name": "SuperUser",
+    "StructDivisionId": "00000000-0000-0000-0000-000000000000",
+    "StructDivision": null,
+    "IsHead": false,
+    "EmployeeRoles": [
+      {
+        "EmployeeId": "dc114758-d201-488e-ba88-a4a24bb57a3c",
+        "RoleId": "8d378ebe-0666-46b3-b7ab-1a52480fd12a",
+        "Role": {
+          "Id": "8d378ebe-0666-46b3-b7ab-1a52480fd12a",
+          "Name": "Big Boss"
+        }
+      },
+      {
+        "EmployeeId": "dc114758-d201-488e-ba88-a4a24bb57a3c",
+        "RoleId": "412174c2-0490-4101-a7b3-830de90bcaa0",
+        "Role": {
+          "Id": "412174c2-0490-4101-a7b3-830de90bcaa0",
+          "Name": "Accountant"
+        }
+      },
+      {
+        "EmployeeId": "dc114758-d201-488e-ba88-a4a24bb57a3c",
+        "RoleId": "71fffb5b-b707-4b3c-951c-c37fdfcc8dfb",
+        "Role": {
+          "Id": "71fffb5b-b707-4b3c-951c-c37fdfcc8dfb",
+          "Name": "User"
+        }
+      }
+    ]
+  },
+  {
+    "Id": "49c3dc51-462d-488c-ac31-41af8b3a13c0",
+    "Name": "BigBoss",
+    "StructDivisionId": "00000000-0000-0000-0000-000000000000",
+    "StructDivision": null,
+    "IsHead": false,
+    "EmployeeRoles": [
+      {
+        "EmployeeId": "49c3dc51-462d-488c-ac31-41af8b3a13c0",
+        "RoleId": "8d378ebe-0666-46b3-b7ab-1a52480fd12a",
+        "Role": {
+          "Id": "8d378ebe-0666-46b3-b7ab-1a52480fd12a",
+          "Name": "Big Boss"
+        }
+      }
+    ]
+  },
+  {
+    "Id": "3640c894-3b83-4d45-ade2-d9c3bd4a77ff",
+    "Name": "Accountant",
+    "StructDivisionId": "00000000-0000-0000-0000-000000000000",
+    "StructDivision": null,
+    "IsHead": false,
+    "EmployeeRoles": [
+      {
+        "EmployeeId": "3640c894-3b83-4d45-ade2-d9c3bd4a77ff",
+        "RoleId": "412174c2-0490-4101-a7b3-830de90bcaa0",
+        "Role": {
+          "Id": "412174c2-0490-4101-a7b3-830de90bcaa0",
+          "Name": "Accountant"
+        }
+      }
+    ]
+  },
+  {
+    "Id": "0a825b20-62d5-4045-a5c3-8a5bdb08bd25",
+    "Name": "User",
+    "StructDivisionId": "00000000-0000-0000-0000-000000000000",
+    "StructDivision": null,
+    "IsHead": false,
+    "EmployeeRoles": [
+      {
+        "EmployeeId": "0a825b20-62d5-4045-a5c3-8a5bdb08bd25",
+        "RoleId": "71fffb5b-b707-4b3c-951c-c37fdfcc8dfb",
+        "Role": {
+          "Id": "71fffb5b-b707-4b3c-951c-c37fdfcc8dfb",
+          "Name": "User"
+        }
+      }
+    ]
+  },
+  {
+    "Id": "6a3419d7-95a5-4b2b-939c-bd2dba485867",
+    "Name": "Manager",
+    "StructDivisionId": "00000000-0000-0000-0000-000000000000",
+    "StructDivision": null,
+    "IsHead": false,
+    "EmployeeRoles": [
+      {
+        "EmployeeId": "6a3419d7-95a5-4b2b-939c-bd2dba485867",
+        "RoleId": "71fffb5b-b707-4b3c-951c-c37fdfcc8dfb",
+        "Role": {
+          "Id": "71fffb5b-b707-4b3c-951c-c37fdfcc8dfb",
+          "Name": "User"
+        }
+      }
+    ]
+  },
+  {
+    "Id": "22893a7f-cef7-43b6-99cb-05517f7d2194",
+    "Name": "Guest",
+    "StructDivisionId": "00000000-0000-0000-0000-000000000000",
+    "StructDivision": null,
+    "IsHead": false,
+    "EmployeeRoles": []
+  }
+]
