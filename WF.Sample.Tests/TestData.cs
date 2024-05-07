@@ -22,9 +22,8 @@ public static class TestData
         var options = JsonConvert.DeserializeObject<DbOptions>(optionsJson) 
                       ?? throw new InvalidOperationException("Json deserialization error.");
 
-        var scripts = ScriptNames.Select(s => Path.Combine(ScriptPath, s));
     
-        _dbRuntime = new DbRuntime(options, scripts.ToArray());
+        _dbRuntime = new DbRuntime(options);
     }
 
     public static async Task StartAsync()
@@ -57,13 +56,6 @@ public static class TestData
     public const string OptionsConfigName = "options.json";
     private const string EmployeesConfigName = "employees.json";
     
-    public const string ScriptPath = "./scripts";
-    public static readonly string[] ScriptNames =
-    {
-        "CreatePersistenceObjects.sql", 
-        "CreateObjects.sql", 
-        "FillData.sql"
-    };
 
     private static readonly DbRuntime _dbRuntime;
     private static WorkflowRuntime? _workflowRuntime;

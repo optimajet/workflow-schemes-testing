@@ -1,23 +1,24 @@
 ﻿using DotNet.Testcontainers.Builders;
 using Microsoft.Data.SqlClient;
+using OptimaJet.Workflow.Core.Runtime;
+using OptimaJet.Workflow.DbPersistence;
+using OptimaJet.Workflow.Migrator;
+using WF.Sample.Business.Migrations;
 
 namespace WF.Sample.Tests.Testcontainers;
 
 public class DbRuntime
 {
-    public DbRuntime(DbOptions options, string[]? scripts = null)
+    public DbRuntime(DbOptions options)
     {
         _options = options;
-        _scripts = scripts ?? new string[]{};
     }
 
     public string Name => _options.Name;
     public string ConnectionString => TestContainer.ConnectionString;
     public AzureDatabase TestContainer => _dbTestContainer 
                                           ?? throw new Exception($"The instance of '{nameof(DbRuntime)}' not initialized");
-
-    public MssqlScriptExecutor ScriptExecutor => new(ConnectionString);
-
+    
     public async Task StartAsync()
     {
         _dbTestContainer = new TestcontainersBuilder<AzureDatabase>()
@@ -29,10 +30,7 @@ public class DbRuntime
         //This method is needed to make sure the database is up and ready to accept our requests.
         EnsureDatabaseReady();
 
-        foreach (var script in _scripts)
-        {
-            await ScriptExecutor.ExecuteFileAsync(script);
-        }
+        InitDatabase(ConnectionString);
     }
 
     public async Task StopAsync()
@@ -56,8 +54,15 @@ public class DbRuntime
             }
         }
     }
+    private static void InitDatabase(string connectionString)
+    {
+        var mssqlProvider = new MSSQLProvider(connectionString);
+        new WorkflowRuntime()
+            .WithPersistenceProvider(mssqlProvider)
+            .RunMigrations()
+            .RunCustomMigration(typeof(Migration2000010CreateObjects).Assembly);
+    }
 
-    private readonly string[] _scripts;
     private readonly DbOptions _options;
     private AzureDatabase? _dbTestContainer;
 }
